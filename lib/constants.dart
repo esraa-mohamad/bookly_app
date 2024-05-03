@@ -2,8 +2,19 @@
 import 'package:flutter/material.dart';
 
 
-abstract class ConstantsManager {
+abstract class ConstantsColor {
 
-  static const primaryColor =  Color(0xff100B20);
+  static const primaryColor =  Color(0xff1A5276 );
 
+}
+
+abstract class ConstantsSize {
+
+  static const  double s8 = 8;
+  static const  double s18 = 18;
+}
+
+abstract class ConstantsStrings {
+
+  static const textFamily = "Sedan SC";
 }
