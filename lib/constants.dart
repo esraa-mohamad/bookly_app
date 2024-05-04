@@ -18,3 +18,8 @@ abstract class ConstantsStrings {
 
   static const textFamily = "Sedan SC";
 }
+
+abstract class ConstantsApp {
+
+  static const durationTransition = Duration(milliseconds: 2);
+}
