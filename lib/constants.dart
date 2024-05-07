@@ -18,6 +18,7 @@ abstract class ConstantsSize {
   static const  double s5 = 5.0;
   static const  double s6 = 6.0;
   static const  double s8 = 8.0;
+  static const  double s10 = 10.0;
   static const  double s14 = 14.0;
   static const  double s16 = 16.0;
   static const  double s18 = 18.0;
