@@ -10,7 +10,7 @@ class BookingRating extends StatelessWidget {
     return  Row(
       children: [
         const Icon(
-          Icons.star ,
+          Icons.star_rounded ,
           color: ConstantsColor.yellowColor,
         ),
         const SizedBox(
