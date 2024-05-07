@@ -37,6 +37,33 @@ abstract class Styles {
 
 
   // styles from course
+  static const textStyle14 = TextStyle(
+    fontSize:  ConstantsSize.s14,
+    fontWeight: FontWeight.normal,
+    color: ConstantsColor.grayColor,
+  );
+
+  static const textStyle16 = TextStyle(
+    fontSize:  ConstantsSize.s16,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const textStyle18 = TextStyle(
+    fontSize:  ConstantsSize.s18,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const textStyle20 = TextStyle(
+    fontSize:  ConstantsSize.s20,
+    fontWeight: FontWeight.normal,
+    fontFamily: ConstantsStrings.titleFamily
+  );
+
+  static const textStyle30 = TextStyle(
+      fontSize:  ConstantsSize.s30,
+      fontWeight: FontWeight.bold,
+      fontFamily: ConstantsStrings.titleFamily
+  );
 
 
 }

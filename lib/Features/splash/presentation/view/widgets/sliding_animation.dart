@@ -17,7 +17,7 @@ class SlidingAnimation extends StatelessWidget {
               'Enjoy the life of Books',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontFamily: ConstantsStrings.textFamily,
+                  fontFamily: ConstantsStrings.titleFamily,
                   fontSize: ConstantsSize.s18,
                   fontWeight: FontWeight.bold
               ),
