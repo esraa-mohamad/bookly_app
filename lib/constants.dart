@@ -7,13 +7,15 @@ abstract class ConstantsColor {
   static const primaryColor =  Color(0xff1A5276 );
   static const whiteColor =  Colors.white;
   static const grayColor =  Color(0XFF7F8C8D);
-  static const yellowColor =  Colors.yellow;
+  static const yellowColor =  Color(0xffFFDD4F);
 
 }
 
 abstract class ConstantsSize {
 
   static const  double s3 = 3.0;
+  static const  double s3_6 = 3.6;
+  static const  double s5 = 5.0;
   static const  double s6 = 6.0;
   static const  double s8 = 8.0;
   static const  double s14 = 14.0;
