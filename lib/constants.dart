@@ -13,6 +13,7 @@ abstract class ConstantsColor {
 
 abstract class ConstantsSize {
 
+  static const  double s3 = 3.0;
   static const  double s6 = 6.0;
   static const  double s8 = 8.0;
   static const  double s14 = 14.0;

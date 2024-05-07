@@ -16,6 +16,7 @@ class BestSellerItem extends StatelessWidget {
             aspectRatio: 2.5/4,
             child: Container(
               decoration:  BoxDecoration(
+                color: Colors.red,
                   borderRadius: BorderRadius.circular(ConstantsSize.s8),
                   image: const DecorationImage(
                     fit: BoxFit.fill,
@@ -25,66 +26,42 @@ class BestSellerItem extends StatelessWidget {
             ),
           ),
         ),
-        const Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
+        const SizedBox(
+          width: ConstantsSize.s30,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.5,
+              child: const Text(
                 'Harry Potter and the Goblet of Fire',
                 maxLines: 2,
-                style: Styles.titleLarge,
+                overflow: TextOverflow.ellipsis,
+                style: Styles.textStyle20,
               ),
-              Text(
-                "J.K Rowling",
-                style: Styles.smallStyle,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        "19.99",
-                        style: Styles.numberStyle,
-                      ),
-                      SizedBox(
-                        width: ConstantsSize.s6,
-                      ),
-                      Icon(
-                        Icons.euro_rounded,
-                        color: ConstantsColor.whiteColor,
-                        size: ConstantsSize.s18,
-                      ),
-                    ],
+            ),
+            const SizedBox(
+              height: ConstantsSize.s3,
+            ),
+            const Text(
+              "J.K Rowling",
+              style: Styles.textStyle14,
+            ),
+            const SizedBox(
+              height: ConstantsSize.s3,
+            ),
+            Row(
+              children: [
+                Text(
+                  "19.99 €",
+                  style: Styles.textStyle20.copyWith(
+                    fontFamily: ConstantsStrings.numberFamily,
                   ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        color: ConstantsColor.yellowColor,
-                        size: ConstantsSize.s18,
-                      ),
-                      SizedBox(
-                        width: ConstantsSize.s6,
-                      ),
-                      Text(
-                        "4.8",
-                        style: Styles.rateStyle,
-                      ),
-                      SizedBox(
-                        width: ConstantsSize.s6,
-                      ),
-                      Text(
-                        "(2390)",
-                        style: Styles.smallStyle,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     );
