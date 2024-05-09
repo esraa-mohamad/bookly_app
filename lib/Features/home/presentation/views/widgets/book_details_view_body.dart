@@ -1,4 +1,5 @@
 import 'package:bookly/Core/utils/styles.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/booking_rating.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_item_image.dart';
 import 'package:bookly/constants.dart';
@@ -42,6 +43,12 @@ class BookDetailsViewBody extends StatelessWidget {
 
               ),
             ),
+          ),
+          const SizedBox(
+            height: ConstantsSize.s18,
+          ),
+          const BookingRating(
+            mainAxisAlignment: MainAxisAlignment.center,
           ),
         ],
       ),

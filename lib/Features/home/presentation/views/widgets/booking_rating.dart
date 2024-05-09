@@ -3,14 +3,17 @@ import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
 
 class BookingRating extends StatelessWidget {
-  const BookingRating({super.key});
+  const BookingRating({super.key , this.mainAxisAlignment =MainAxisAlignment.start});
 
+  final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return  Row(
+    mainAxisAlignment: mainAxisAlignment,
       children: [
         const Icon(
           Icons.star_rounded ,
+          size: ConstantsSize.s16,
           color: ConstantsColor.yellowColor,
         ),
         const SizedBox(
