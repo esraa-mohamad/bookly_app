@@ -1,11 +1,11 @@
+import 'package:bookly/Core/utils/app_routes.dart';
 import 'package:bookly/Core/utils/assets.dart';
-import 'package:bookly/Features/home/presentation/views/home.dart';
 import 'package:bookly/Features/splash/presentation/view/widgets/sliding_animation.dart';
 import 'package:bookly/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -14,14 +14,14 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProviderStateMixin{
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
 
-  late AnimationController animationController ;
-  late Animation<Offset> slideAnimation ;
+  late Animation<Offset> slideAnimation;
 
   @override
   void initState() {
-
     super.initState();
 
     initSlideAnimation();
@@ -29,24 +29,19 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
     navigateToHome();
   }
 
-
-
-
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(
-            AssetsData.logoPath,
+          AssetsData.logoPath,
         ),
         const SizedBox(
           height: ConstantsSize.s8,
         ),
-       SlidingAnimation(
-           slidingAnimation: slideAnimation
-       )
+        SlidingAnimation(slidingAnimation: slideAnimation)
       ],
     );
   }
@@ -60,14 +55,14 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   // initialize transition animation
   void initSlideAnimation() {
     animationController = AnimationController(
-      vsync: this ,
+      vsync: this,
       duration: const Duration(
         seconds: 1,
       ),
     );
 
     slideAnimation = Tween<Offset>(
-      begin: const Offset(0 , 10) ,
+      begin: const Offset(0, 10),
       end: Offset.zero,
     ).animate(animationController);
     animationController.forward();
@@ -75,8 +70,15 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
 
   // navigate to home page by animation
   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 3) , (){
-      Get.to(const HomeView() , transition: Transition.fade , duration:ConstantsApp.durationTransition );
-    });
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        // Get.to(const HomeView(),
+        //     transition: Transition.fade,
+        //     duration: ConstantsApp.durationTransition
+        // );
+        GoRouter.of(context).push(AppRouter.homeViewRoutes);
+      },
+    );
   }
 }
