@@ -29,6 +29,7 @@ abstract class ConstantsSize {
   static const  double s28 = 28.0;
   static const  double s30 = 30.0;
   static const  double s40 = 40.0;
+  static const  double s43 = 43.0;
   static const  double s50 = 50.0;
   static const  double s75 = 75.0;
   static const  double s125 = 125.0;
