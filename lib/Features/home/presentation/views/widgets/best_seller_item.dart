@@ -1,9 +1,10 @@
+import 'package:bookly/Core/utils/app_routes.dart';
 import 'package:bookly/Core/utils/assets.dart';
 import 'package:bookly/Core/utils/styles.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/booking_rating.dart';
 import 'package:bookly/constants.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({super.key});
@@ -12,18 +13,23 @@ class BestSellerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(
-          height: ConstantsSize.s125,
-          child: AspectRatio(
-            aspectRatio: 2.5/4,
-            child: Container(
-              decoration:  BoxDecoration(
-                color: Colors.red,
-                  borderRadius: BorderRadius.circular(ConstantsSize.s8),
-                  image: const DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage(AssetsData.testImage),
-                  )
+        GestureDetector(
+          onTap: (){
+            GoRouter.of(context).push(AppRouter.bookDetailsViewRout);
+          },
+          child: SizedBox(
+            height: ConstantsSize.s125,
+            child: AspectRatio(
+              aspectRatio: 2.5/4,
+              child: Container(
+                decoration:  BoxDecoration(
+                  color: Colors.red,
+                    borderRadius: BorderRadius.circular(ConstantsSize.s8),
+                    image: const DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage(AssetsData.testImage),
+                    )
+                ),
               ),
             ),
           ),
