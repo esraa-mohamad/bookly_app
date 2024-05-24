@@ -4,7 +4,7 @@ abstract class FeaturedBooksState extends Equatable {
   const FeaturedBooksState();
 
   @override
-  List<Object> get  props => [];
+  List<Object?> get  props => [];
 }
 
 class FeaturedBooksInitial extends FeaturedBooksState {}
