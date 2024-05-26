@@ -19,7 +19,9 @@ class BooksDetailsSimilarSection extends StatelessWidget {
         const CustomBookDetailsAppBar(),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width *0.2),
-          child: const CustomBookItemImage(),
+          child: const CustomBookItemImage(
+            imageUrl: 'https://cdn.kobo.com/book-images/63781af4-7e15-441c-a86b-c2293a1e50e9/1200/1200/False/english-books-to-learn-high-school-heist.jpg',
+          ),
         ),
         const SizedBox(
           height: ConstantsSize.s43,
