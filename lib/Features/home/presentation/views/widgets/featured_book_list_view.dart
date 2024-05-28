@@ -16,31 +16,27 @@ class FeaturedBookListView extends StatelessWidget {
       builder: (context, state) {
         if (state is FeaturedBooksSuccess) {
           return SizedBox(
-            height: MediaQuery
-                .of(context)
-                .size
-                .height * 0.3,
+            height: MediaQuery.of(context).size.height * 0.3,
             child: ListView.builder(
-              physics: const BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemCount: state.bookModel.length,
                 itemBuilder: (context, index) {
-                  return  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: ConstantsSize.s8),
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: ConstantsSize.s8),
                     child: CustomBookItemImage(
-                      imageUrl: state.bookModel[index].volumeInfo.imageLinks.thumbnail,
+                      imageUrl: state
+                          .bookModel[index].volumeInfo.imageLinks.thumbnail,
                     ),
                   );
-                }
-            ),
+                }),
           );
-        }
-        else if(state is FeaturedBooksFailure){
+        } else if (state is FeaturedBooksFailure) {
           return CustomErrorWidget(
             errorMessage: state.errorMessage,
           );
-        }
-        else{
+        } else {
           return const Center(child: CustomLoadingIndicator());
         }
       },
