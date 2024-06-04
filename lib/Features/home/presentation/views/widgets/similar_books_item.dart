@@ -18,13 +18,13 @@ class SimilarBooksListView extends StatelessWidget {
           return SizedBox(
             height: MediaQuery.of(context).size.height * 0.15,
             child: ListView.builder(
+              itemCount: state.books.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: ConstantsSize.s5),
+                  return  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: ConstantsSize.s5),
                     child: CustomBookItemImage(
-                      imageUrl:
-                          'https://cdn.kobo.com/book-images/63781af4-7e15-441c-a86b-c2293a1e50e9/1200/1200/False/english-books-to-learn-high-school-heist.jpg',
+                      imageUrl:state.books[index].volumeInfo.imageLinks?.thumbnail ?? ''
                     ),
                   );
                 }),
