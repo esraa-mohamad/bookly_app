@@ -17,6 +17,7 @@ class _CustomCategoriesBookState extends State<CustomCategoriesBook> {
     'Programming',
     'Computer Science',
     'Imagination',
+    'Romance',
     'Sport',
     'Horror',
     'Family',

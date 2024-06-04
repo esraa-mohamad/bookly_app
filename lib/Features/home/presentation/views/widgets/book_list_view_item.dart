@@ -47,7 +47,10 @@ class BookListViewItem extends StatelessWidget {
                     height: ConstantsSize.s3,
                   ),
                   Text(
-                    bookModel.volumeInfo.authors![0],
+                    (bookModel.volumeInfo.authors != null &&
+                            bookModel.volumeInfo.authors!.isNotEmpty)
+                        ? bookModel.volumeInfo.authors![0]
+                        : 'Unknown Author',
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(
@@ -63,7 +66,7 @@ class BookListViewItem extends StatelessWidget {
                         ),
                       ),
                       BookingRating(
-                        count: bookModel.volumeInfo.pageCount!,
+                        count: bookModel.volumeInfo.pageCount ?? 0,
                       ),
                     ],
                   ),

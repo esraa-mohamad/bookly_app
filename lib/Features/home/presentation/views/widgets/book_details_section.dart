@@ -61,7 +61,9 @@ class BooksDetailsSimilarSection extends StatelessWidget {
         const SizedBox(
           height: ConstantsSize.s37,
         ),
-        const BookActions(),
+         BookActions(
+          bookModel: bookModel,
+        ),
       ],
     );
   }
