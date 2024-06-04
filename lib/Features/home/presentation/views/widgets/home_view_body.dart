@@ -1,6 +1,7 @@
 import 'package:bookly/Core/utils/styles.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_app_bar.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/custom_categories_book.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/featured_book_list_view.dart';
 import 'package:bookly/constants.dart';
 import 'package:flutter/cupertino.dart';
@@ -37,16 +38,23 @@ class HomeViewBody extends StatelessWidget {
             children: [
 
               const SizedBox(
-                height: ConstantsSize.s30,
+                height: ConstantsSize.s20,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: ConstantsSize.s30),
                 child: Text(
-                  'Newest Books',
+                  'Categories Books',
                   style: Styles.textStyle18.copyWith(
                       fontSize: ConstantsSize.s20
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: ConstantsSize.s20,
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: ConstantsSize.s30),
+                child: CustomCategoriesBook(),
               ),
               const SizedBox(
                 height: ConstantsSize.s20,

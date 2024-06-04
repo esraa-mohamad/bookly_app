@@ -19,7 +19,7 @@ class BookListViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.bookDetailsViewRout);
       },
       child: SizedBox(
-        height: ConstantsSize.s125,
+        height: ConstantsSize.s120,
         child: Row(
           children: [
             CustomBookItemImage(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? ''),
@@ -43,7 +43,7 @@ class BookListViewItem extends StatelessWidget {
                     height: ConstantsSize.s3,
                   ),
                    Text(
-                    bookModel.volumeInfo.authors![0],
+                    bookModel.volumeInfo.authors![0 ],
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(
